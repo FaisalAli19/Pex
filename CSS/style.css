@@ -1,0 +1,217 @@
+/***********************************
+            Global Css
+************************************/
+body{
+    font-family: 'Open Sans', sans-serif;
+    color: #fff;
+    overflow-x: hidden;
+}
+
+/***********************************
+            Header Css
+************************************/
+header{
+    background: url(../images/Top-bg-1600.jpg) center center no-repeat;
+    -webkit-background-size: cover;
+    background-size: cover;
+    min-height: 100vh;
+    position: relative;
+}
+header nav{
+    box-sizing: border-box;
+    background-color: #000;
+    display: flex;
+    min-height: 50px;
+    align-items: center;
+    position: fixed;
+    min-width: 100%;
+    visibility: hidden;
+}
+nav .menu{
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 20px;
+    display: none;
+}
+nav .menu:hover{
+    cursor: pointer;
+    color: #eee;
+}
+nav .logo h1 {
+    text-indent: -9999px;
+    background: url(../images/logo.png) left center no-repeat;
+    margin: 0;
+}
+nav .menu-items{
+    padding: 8.5px 0;
+    text-align: right;
+}
+nav .nav-list ul{
+    margin: 0;
+}
+nav .nav-list li{
+    list-style: none;
+    margin: 0 5px;
+}
+nav .nav-list li a{
+    text-decoration: none;
+    color: #fff;
+}
+nav .nav-list li a:hover{
+    color: #c4485f;
+    font-size: 14px;
+}
+nav .search input{
+    background-color: transparent;
+    border: 0;
+    padding: 0 5px;
+}
+nav .search i{
+    position: relative;
+    left: -20px;
+    color: #ccc;
+}
+header .Intro{
+    position: absolute;
+    top: 50%;
+    left: 6.6%;
+    transform: translateY(-50%);
+    text-align: center;
+}
+header .Intro a{
+    background-color: #8824cd;
+    text-decoration: none;
+    color: #fff;
+    padding: 10px 40px;
+    display: inline-block;
+    margin-top: 15px;
+    border-radius: 30px;
+}
+header .Intro a:hover{
+    background-color: #9648cc;
+}
+header .Intro h5{
+    font-size: 12px;
+}
+
+/***********************************
+            About Css
+************************************/
+#About{
+    background-color: #2e3b4e;
+    min-height: 100vh;
+    padding: 20px 0;
+}
+#About .row{
+    padding: 15px 0;
+}
+#About h3{
+    padding: 10px 0;
+}
+/***********************************
+           How it work Css
+************************************/
+#How-It-Works .topsection{
+    background: linear-gradient(rgba(231, 82, 107, 0.8),rgba(231, 82, 107, 0.8)), url(../images/Wicked-Bg.jpg)center no-repeat;
+    -webkit-background-size: cover;
+    background-size: cover;
+    min-height: 50vh;
+    position: relative;
+}
+#How-It-Works .topsection .row{
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    text-align: center;
+}
+#How-It-Works .topsection p{
+    width: 50%;
+    margin: 0 auto;
+    font-size: 14px;
+    padding: 15px 0;
+}
+#How-It-Works .topsection a{
+    display: inline-block;
+    background-color: #fff;
+    color: #d54c63;
+    padding: 10px 40px;
+    border-radius: 30px;
+    text-decoration: none;
+}
+#How-It-Works .topsection a:hover{
+    background-color: #d2697b;
+    color: #fff;
+}
+#How-It-Works .bottomsection{
+    min-height: 50vh;
+}
+#How-It-Works .bottomsection .content{
+    padding: 20px 0;
+}
+#How-It-Works .bottomsection img{
+    max-height: 350px;
+}
+#How-It-Works .bottomsection h3{
+    color: #6f7a86;
+    padding: 10px 0;
+}
+#How-It-Works .bottomsection p{
+    color: #979fa7;
+    padding: 10px 0;
+}
+/***********************************
+           Services Css
+************************************/
+#Services .top{
+    background: linear-gradient(rgba(70, 70, 70, 0.7),rgba(70, 70, 70, 0.7)), url(../images/Experience.jpg)center no-repeat;
+    -webkit-background-size: cover;
+    background-size: cover;
+    position: relative;
+    min-height: 60vh;
+}
+
+#Services .overlay{
+    background-color: rgba(75,30,91,0.6);
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 80%;
+    text-align: center;
+    padding: 20px 0;
+}
+#Services .overlay h3{
+    padding: 10px 0;
+    color: #dcd7de;
+}
+#Services .overlay p{
+    width: 50%;
+    margin: 0 auto;
+    color: #dcd7de;
+    padding: 10px 0;
+}
+#Services .overlay a{
+    display: inline-block;
+    background-color: #8824cd;
+    color: #fff;
+    padding: 10px 40px;
+    border-radius: 20px;
+    text-decoration: none;
+    margin-top: 20px;
+}
+#Services .overlay a:hover{
+    background-color: #9648cc;
+}
+#Services .overlay h5{
+    font-size: 12px;
+    color:  #dcd7de;
+}
+#Services .bottom{
+    background: linear-gradient(rgba(36, 36, 36, 0.5),rgba(36, 36, 36, 0.5)), url(../images/chopstick.jpg)center no-repeat;
+    -webkit-background-size: cover;
+    background-size: cover;
+    min-height: 40vh;
+}
