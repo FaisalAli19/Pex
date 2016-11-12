@@ -4,9 +4,7 @@
 body{
     font-family: 'Open Sans', sans-serif;
     color: #fff;
-    overflow-x: hidden;
 }
-
 /***********************************
             Header Css
 ************************************/
@@ -26,14 +24,15 @@ header nav{
     min-width: 100%;
     z-index: 1;
 }
-nav .menu{
+nav i.nav-toggle{
     position: absolute;
     right: 20px;
-    top: 50%;
+    top: 40%;
     transform: translateY(-50%);
     font-size: 20px;
+    z-index: 1;
 }
-nav .menu:hover{
+nav .nav-toggle:hover{
     cursor: pointer;
     color: #eee;
 }
@@ -52,6 +51,9 @@ nav .nav-list ul{
 nav .nav-list li{
     list-style: none;
     margin: 0 5px;
+}
+.nav-list li.active > a{
+    color: #c4485f;
 }
 nav .nav-list li a{
     text-decoration: none;
@@ -115,8 +117,8 @@ header .Intro h5{
     background: linear-gradient(rgba(231, 82, 107, 0.8),rgba(231, 82, 107, 0.8)), url(../images/Wicked-Bg.jpg)center no-repeat;
     -webkit-background-size: cover;
     background-size: cover;
-    min-height: 50vh;
     position: relative;
+    min-height: 350px;
 }
 #How-It-Works .topsection .row{
     position: absolute;
@@ -124,6 +126,7 @@ header .Intro h5{
     left: 0;
     transform: translateY(-50%);
     text-align: center;
+    margin: 0;
 }
 #How-It-Works .topsection p{
     width: 50%;
@@ -142,9 +145,6 @@ header .Intro h5{
 #How-It-Works .topsection a:hover{
     background-color: #d2697b;
     color: #fff;
-}
-#How-It-Works .bottomsection{
-    min-height: 50vh;
 }
 #How-It-Works .bottomsection .content{
     padding: 20px 0;
@@ -168,7 +168,7 @@ header .Intro h5{
     -webkit-background-size: cover;
     background-size: cover;
     position: relative;
-    min-height: 60vh;
+    min-height: 350px;
 }
 
 #Services .overlay{
@@ -211,8 +211,8 @@ header .Intro h5{
     background: linear-gradient(rgba(36, 36, 36, 0.5),rgba(36, 36, 36, 0.5)), url(../images/chopstick.jpg)center no-repeat;
     -webkit-background-size: cover;
     background-size: cover;
-    min-height: 40vh;
-    padding: 30px;
+    min-height: 280px;
+    padding: 40px;
 }
 #Services .bottom h4{
     border: 1px solid #fff;
@@ -237,7 +237,7 @@ header .Intro h5{
 ************************************/
 #Contact{
     background-color: #e7526b;
-    min-height: 70vh;
+    min-height: 80vh;
     padding: 50px 0;
 }
 #Contact form a{
@@ -348,26 +348,23 @@ footer .back-to-top i{
 
 /**********Small Tables and Medium Devices*************/
 @media screen and (min-width:480px) and (max-width:767px){
+    /*-----Header Start Here-----*/
     header nav{
-        background-color: transparent;
-        display: flex;
-        min-height: 50px;
-        align-items: center;
         position: relative;
     }
     nav .container{
         width: 100%;
     }
-    nav .menu{
-        right: 20px;
-        top: 20px;
-    }
     nav .logo h1 {
         background-position:  center center;
     }
-    nav .menu-items{
+    nav .nav-toggle{
+        top: 0;
+        right: 0;
+    }
+    nav .nav-list{
         text-align: center;
-        background-color: rgba(0,0,0,.5);
+        background-color: rgba(0,0,0,.7);
         padding: 15px 0;
         display: none;
     }
@@ -395,9 +392,174 @@ footer .back-to-top i{
         width: 100%;
         padding: 10px;
     }
+    /*-----About Start Here-----*/
+    #About{
+        text-align: center;
+    }
+    /*-----How-It-Works Start Here-----*/
+    #How-It-Works .topsection p{
+        width: 80%;
+    }
+    #How-It-Works .bottomsection{
+        text-align: center;
+    }
+    #How-It-Works .bottomsection img{
+        margin: 0 auto;
+    }
+    #How-It-Works .bottomsection p{
+        width: 90%;
+        margin: 0 auto;
+        line-height: 1.5em;
+        padding: 0 10px;
+    }
+    /*-----Services Start Here-----*/
+    #Services .overlay p{
+        width: 90%;
+    }
+    #Services .bottom p{
+        font-size: 18px;
+        width: 300px;
+    }
+    #Services .bottom .photographer{
+        display: flex;
+        align-items: center;
+    }
+    #Services .bottom img{
+        margin-right: 15px;
+    }
 }
 
 /**********Small Devices*************/
 @media screen and (min-width:320px) and (max-width:479px){
+    /*-----Header Start Here-----*/
+    header nav{
+        position: relative;
+    }
+    nav .container{
+        width: 100%;
+    }
+    nav .logo h1 {
+        background-position:  center center;
+    }
+    nav .nav-list{
+        text-align: center;
+        background-color: rgba(0,0,0,.7);
+        padding: 15px 0;
+        display: none;
+    }
+    nav .list-inline>li{
+        display: block;
+    }
+    nav .nav-list li{
+        padding: 15px;
+        margin: 0;
+    }
+    nav .nav-list li:not(:last-child){
+        border-bottom: 2px solid rgba(0,0,0,.1);
+    }
+    nav .search input{
+        width: 50%;
+        padding: 10px;
+    }
+    header .Intro{
+        width: 100%;
+        padding: 10px;
+    }
+    header .Intro h1{
+        font-size: 2em;
+    }
+    /*-----About Start Here-----*/
+    #About{
+        text-align: center;
+    }
+    /*-----How-It-Works Start Here-----*/
+    #How-It-Works .topsection h3{
+        font-size: 1.6em;
+    }
+    #How-It-Works .topsection p{
+        width: 90%;
+        font-size: 0.9em;
+    }
+    #How-It-Works .bottomsection{
+        text-align: center;
+    }
+    #How-It-Works .bottomsection img{
+        margin: 0 auto;
+    }
+    #How-It-Works .bottomsection h3{
+        font-size: 1.4em;
+    }
+    #How-It-Works .bottomsection p{
+        width: 90%;
+        margin: 0 auto;
+        line-height: 1.8em;
+        padding: 0 10px;
+        font-size: 1em;
+    }
+    /*-----Services Start Here-----*/
+    #Services .overlay p{
+        width: 90%;
+    }
+    #Services .bottom p{
+        font-size: 1.5em;
+        width: 100%;
+    }
+    /*-----Contact Start Here-----*/
+    #Contact p{
+        width: 90%;
+    }
+}
+/*Devices like old iphones*/
+@media screen and (min-width:320px) and (max-width:370px){
+    /*-----Header Start Here-----*/
+    header .Intro h1{
+        font-size: 1.8em;
+    }
+    /*-----About Start Here-----*/
+    #About h3{
+        font-size: 1.5em;
+    }
+    /*-----How-It-Works Start Here-----*/
+    #How-It-Works .topsection h3{
+        font-size: 1.5em;
+    }
+    #How-It-Works .topsection p{
+        width: 100%;
+    }
+    #How-It-Works .bottomsection h3{
+        font-size: 1.2em;
+    }
+    /*-----Services Start Here-----*/
+    #Services .overlay{
+        padding-top: 5px;
+    }
+    #Services .overlay h3{
+        font-size: 1.5em;
+        margin-bottom: 0;
+    }
+    #Services .overlay p{
+        width: 100%;
+    }
+    #Services .bottom p{
+        font-size: 1.1em;
+        width: 100%;
+    }
+    /*-----Contact Start Here-----*/
+    #Contact p{
+        width: 90%;
+    }
+}
 
+/*----------------Mini Media Query--------------------*/
+
+@media screen and (min-width:992px) and (max-width:1028px){
+    #Services .bottom .container{
+        width: 100%;
+    }
+}
+
+@media screen and (min-width:768px) and (max-width:808px){
+    #Services .bottom .container{
+        width: 100%;
+    }
 }
