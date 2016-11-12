@@ -237,8 +237,7 @@ header .Intro h5{
 ************************************/
 #Contact{
     background-color: #e7526b;
-    min-height: 80vh;
-    padding: 50px 0;
+    padding: 70px 0;
 }
 #Contact form a{
     background-color: #8824cd;
