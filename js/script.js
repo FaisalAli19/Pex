@@ -1,5 +1,6 @@
 /*jslint browser: true*/
 /*global $, jQuery, alert*/
+
 //Smooth Scroll function
 $(document).ready(function () {
     'use strict';
@@ -44,14 +45,3 @@ $(document).ready(function () {
         });
     });
 });
-//Add screen width at the top of the screen
-var show_width = 1;
-if (show_width === 1) {
-    $(document).ready(function () {
-        "use strict";
-        $(window).resize(function () {
-            var screen_width = $(window).width();
-            document.getElementById('screen_width').innerHTML = 'Window Width: ' + screen_width.toString();
-        });
-    });
-}

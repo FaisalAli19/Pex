@@ -18,14 +18,13 @@ header{
     position: relative;
 }
 header nav{
-    box-sizing: border-box;
-    background-color: #000;
+    background-color: transparent;
     display: flex;
     min-height: 50px;
     align-items: center;
     position: fixed;
     min-width: 100%;
-    visibility: hidden;
+    z-index: 1;
 }
 nav .menu{
     position: absolute;
@@ -33,7 +32,6 @@ nav .menu{
     top: 50%;
     transform: translateY(-50%);
     font-size: 20px;
-    display: none;
 }
 nav .menu:hover{
     cursor: pointer;
@@ -76,9 +74,8 @@ nav .search i{
 header .Intro{
     position: absolute;
     top: 50%;
-    left: 6.6%;
-    transform: translateY(-50%);
-    text-align: center;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 header .Intro a{
     background-color: #8824cd;
@@ -94,6 +91,7 @@ header .Intro a:hover{
 }
 header .Intro h5{
     font-size: 12px;
+    padding: 10px;
 }
 
 /***********************************
@@ -214,4 +212,192 @@ header .Intro h5{
     -webkit-background-size: cover;
     background-size: cover;
     min-height: 40vh;
+    padding: 30px;
+}
+#Services .bottom h4{
+    border: 1px solid #fff;
+    padding: 10px 0;
+    width: 150px;
+    text-align: center;
+    border-radius: 20px;
+}
+#Services .bottom p{
+    font-size: 2em;
+    width: 450px;
+}
+#Services .bottom .photographer{
+    display: flex;
+    align-items: center;
+}
+#Services .bottom img{
+    margin-right: 15px;
+}
+/***********************************
+           Contact Css
+************************************/
+#Contact{
+    background-color: #e7526b;
+    min-height: 70vh;
+    padding: 50px 0;
+}
+#Contact form a{
+    background-color: #8824cd;
+    padding: 10px 30px;
+    border-radius: 5px;
+    display: inline-block;
+    color: #fff;
+    text-decoration: none;
+}
+#Contact form a:hover{
+    background-color: #9341cb;
+}
+
+#Contact .email{
+    color: #fff;
+}
+/***********************************
+           Footer Css
+************************************/
+footer{
+    background-color: #2e3b4e;
+    padding-top: 10px;
+    position: relative;
+}
+
+footer .socio-list{
+    text-align: center;
+}
+footer .socio-list ul{
+    margin: 0;
+    padding: 0;
+}
+footer .socio-list li{
+    list-style: none;
+    margin: 10px ;
+}
+footer .socio-list li a{
+    color: #fff;
+    font-size: 1.5em;
+}
+footer .socio-list li:first-child a:hover{
+    color: #3b5998;
+}
+footer .socio-list li:nth-child(2) a:hover{
+    color: #00aced;
+}
+footer .socio-list li:nth-child(3) a:hover{
+    color: #dd4b39;
+}
+footer .socio-list li:last-child a:hover{
+    color: #ea4c89;
+}
+footer .copyright{
+    text-align: center;
+    color: #ccc;
+}
+footer .copyright p{
+    margin: 0;
+    padding-top: 10px;
+}
+footer .back-to-top{
+    position: absolute;
+    right:150px;
+    top: -25px;
+}
+footer .back-to-top i{
+    background-color: #2e3b4e;
+    color: #fff;
+    padding: 15px 30px 20px 30px;
+    border-radius: 50%;
+}
+/************************************************************
+                        Media Query
+************************************************************/
+
+/**********Small Desktop, Laptop and large Tables*************/
+@media screen and (min-width:768px) and (max-width:991px){
+    /*-----Header Section-----*/
+    nav .container{
+        width: 100%;
+    }
+    /*-----How it works Section-----*/
+    #How-It-Works .topsection p{
+        width: 80%;
+    }
+    #How-It-Works .bottomsection img{
+        margin: 0 auto;
+    }
+    #How-It-Works .bottomsection .content{
+        text-align: center;
+    }
+    #How-It-Works .bottomsection p{
+        padding: 10px;
+        width: 90%;
+        margin: 0 auto;
+    }
+}
+/**********Mini Media Query for Navbar*************/
+@media screen and (min-width:768px) and (max-width:781px){
+    nav .menu-items{
+        text-align: left;
+    }
+    nav .nav-list li{
+        margin: 0 4px;
+    }
+}
+
+/**********Small Tables and Medium Devices*************/
+@media screen and (min-width:480px) and (max-width:767px){
+    header nav{
+        background-color: transparent;
+        display: flex;
+        min-height: 50px;
+        align-items: center;
+        position: relative;
+    }
+    nav .container{
+        width: 100%;
+    }
+    nav .menu{
+        right: 20px;
+        top: 20px;
+    }
+    nav .logo h1 {
+        background-position:  center center;
+    }
+    nav .menu-items{
+        text-align: center;
+        background-color: rgba(0,0,0,.5);
+        padding: 15px 0;
+        display: none;
+    }
+    nav .list-inline>li{
+        display: block;
+    }
+    nav .nav-list li{
+        padding: 15px;
+        margin: 0;
+    }
+    nav .nav-list li:not(:last-child){
+        border-bottom: 2px solid rgba(0,0,0,.1);
+    }
+    nav .search input{
+        width: 50%;
+        padding: 10px;
+    }
+    header .Intro{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+    header .Intro{
+        width: 100%;
+        padding: 10px;
+    }
+}
+
+/**********Small Devices*************/
+@media screen and (min-width:320px) and (max-width:479px){
+
 }
